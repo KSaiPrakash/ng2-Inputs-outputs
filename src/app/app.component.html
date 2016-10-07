@@ -1,0 +1,14 @@
+<h1>
+  {{title}}
+</h1>
+<h2> Parent App Component </h2>
+<label> Enter Parent AppComponent Value </label>
+<input type="text" #ptext (keyup)="0">
+<p> Value from the Child Tutorial Component is </p> 
+{{childData}}
+<p> Value from the Child Two Component is </p> 
+{{childtwoData}}
+
+<my-tutorials (childEvent)="childData=$event" [parentData]= "ptext.value"></my-tutorials>
+<my-child-two (childTwoEvent)="childtwoData=$event"></my-child-two>
+
